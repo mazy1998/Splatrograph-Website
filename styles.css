@@ -63,28 +63,19 @@ pre {
 }
 
 .command-container {
+    display: flex;
+    align-items: center;
     position: relative;
     width: 100%;
 }
 
-.highlight {
-    color: #ff5555;
-    font-weight: bold;
-}
-
-a {
-    color: #66d9ff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+.command-container pre {
+    flex-grow: 1;
+    margin: 0;
 }
 
 .copy-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    margin-left: 10px;
     background: linear-gradient(45deg, #1b98e0, #66d9ff);
     color: #fff;
     border: none;
@@ -99,6 +90,20 @@ a:hover {
 .copy-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 2px 8px rgba(27, 152, 224, 0.5);
+}
+
+.highlight {
+    color: #ff5555;
+    font-weight: bold;
+}
+
+a {
+    color: #66d9ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .button-container {
