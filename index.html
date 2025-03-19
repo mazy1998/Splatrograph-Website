@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splatrograph API</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐝</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1><span class="gradient-text">Splatrograph API</span> 🐝</h1>
+    
+    <div class="intro">
+        <p>Welcome! If you'd like to test the API for personal use, follow the instructions below to get started.</p>
+    </div>
+
+    <div class="section">
+        <h2>Generate Splats with Brush 🖌️</h2>
+        <p>Process your splats effortlessly from the terminal using this command:</p>
+        <div class="command-container">
+            <pre><code id="cmd1">curl -X POST -F "file=@chair.zip" https://5259-93-70-84-192.ngrok-free.app/process-splat/</code></pre>
+            <button class="copy-btn" onclick="copyText('cmd1')">Copy</button>
+        </div>
+        <p>Replace <code>chair.zip</code> with any compatible .zip file for Brush to process (max 115MB for now). Download a sample file here: <a href="https://drive.google.com/file/d/1EUcmoo5c2Ab9SiyWc8dZxbOxkEKWTU4C/view" target="_blank">chair.zip</a></p>
+    </div>
+
+    <div class="section">
+        <h2>Full Image-to-Splat Pipeline</h2>
+        <p>To process a scene, structure your project folder as [car], with an images subfolder containing the scene’s images, then run the complete pipeline with:</p>
+        <div class="command-container">
+            <pre><code id="cmd2">curl -X POST -F "file=@car.zip" https://5259-93-70-84-192.ngrok-free.app/run-full-pipeline/</code></pre>
+            <button class="copy-btn" onclick="copyText('cmd2')">Copy</button>
+        </div>
+        <p>Your zip file should look like this:
+        <pre><code id="cmd2">car.zip
+    +── images
+    │   +── image1.jpg
+    │   +── image2.jpg
+    │   +── ...
+    │   +── imageN.jpg</code></pre>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Automatic COLMAP Reconstruction</h2>
+        <p>If you want to run only the COLMAP pipeline, use:</p>
+        <div class="command-container">
+            <pre><code id="cmd3">curl -X POST -F "file=@<Project_name>car.zip" https://5259-93-70-84-192.ngrok-free.app/run-colmap/</code></pre>
+            <button class="copy-btn" onclick="copyText('cmd3')">Copy</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Available Scenes</h2>
+        <h3>MipNeRF Scenes</h3>
+        <div class="scene-list">
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1LawlC-YjHSMl5rwRmEOMQEbJUioaYI5p/view" target="_blank">bicycle</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1IWhmM49q_pfUZzJhA_vXv4POBODSAh32/view" target="_blank">bonsai</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1564FHRsObZDGUlRx4RTFBTCi8jDPzTjj/view" target="_blank">counter</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1WROBCrVu3YqA60mbRGmSRYXOJB4N5KAk/view" target="_blank">garden</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1VSJM4b3pcQYiZj4xWSIIzHhwbzMcFWZv/view" target="_blank">kitchen</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1ieRBqlouADIAbCy8ryjI7M2PsfSNR23u/view" target="_blank">room</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1noPG4AowuT__xFV4uHODzOW7te9Kbb-T/view" target="_blank">stump</a></div>
+        </div>
+        <h3>Synthetic Blender Scenes</h3>
+        <div class="scene-list">
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1EUcmoo5c2Ab9SiyWc8dZxbOxkEKWTU4C/view" target="_blank">chair</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1UpBQoUJ9ShKgsyM7WaPy0a6qqtUMSOCx/view" target="_blank">drums</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1hwE1z0GSRHfMGXx3TyhuyqT-pDReeRik/view" target="_blank">ficus</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1EtIyCOyFAbTKHlMvNSwCFr5C1peyI107/view" target="_blank">hotdog</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/16TY5KxWUq7OzjkkLDBGNKZ0P5Laf-oaL/view" target="_blank">lego</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1MWxV_NReK-UW4zKMbDIxQNiPwALZGSpd/view" target="_blank">materials</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1s1PpJe71OECKnrUeNVdzjhKk-JXKlngI/view" target="_blank">mic</a></div>
+            <div class="scene-btn"><a href="https://drive.google.com/file/d/1Wvne6m7voRj8LvSosvq9vKMp8UYMCrER/view" target="_blank">ship</a></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <p><span class="highlight">Note:</span> Please avoid running long COLMAP processes for now!</p>
+        <p>Ready to start? Give it a go!</p>
+    </div>
+
+    <div class="button-container">
+        <button class="action-btn" onclick="window.open('https://github.com', '_blank')">View on GitHub</button>
+        <button class="action-btn" onclick="window.open('https://discord.gg/NqwTqVYVmj', '_blank')">Join Our Discord</button>
+        <button class="action-btn" onclick="window.open('https://example.com/docs', '_blank')">Read the Docs</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
