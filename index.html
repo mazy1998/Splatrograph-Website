@@ -19,7 +19,7 @@
         <h2>Generate Splats with Brush 🖌️</h2>
         <p>Process your splats effortlessly from the terminal using this command:</p>
         <div class="command-container">
-            <pre><code id="cmd1">curl -X POST -F "file=@chair.zip" https://5259-93-70-84-192.ngrok-free.app/process-splat/</code></pre>
+            <pre><code id="cmd1">curl -X POST -F "file=@chair.zip" https://polecat-relaxing-hideously.ngrok-free.app/process-splat/</code></pre>
             <button class="copy-btn" onclick="copyText('cmd1')">Copy</button>
         </div>
         <p>Replace <code>chair.zip</code> with any compatible .zip file for Brush to process (max 115 MB for now). Download a sample file here: <a href="https://drive.google.com/file/d/1EUcmoo5c2Ab9SiyWc8dZxbOxkEKWTU4C/view" target="_blank">chair.zip</a></p>
@@ -29,7 +29,7 @@
         <h2>Full Image-to-Splat Pipeline</h2>
         <p>To process a scene, structure your project folder as [car], with an images subfolder containing the scene’s images, then run the complete pipeline with:</p>
         <div class="command-container">
-            <pre><code id="cmd2">curl -X POST -F "file=@car.zip" https://5259-93-70-84-192.ngrok-free.app/run-full-pipeline/</code></pre>
+            <pre><code id="cmd2">curl -X POST -F "file=@car.zip" https://polecat-relaxing-hideously.ngrok-free.app/run-full-pipeline/</code></pre>
             <button class="copy-btn" onclick="copyText('cmd2')">Copy</button>
         </div>
         <p>Your zip file should look like this:
@@ -46,7 +46,7 @@
         <h2>Automatic COLMAP Reconstruction</h2>
         <p>If you want to run only the COLMAP pipeline, use:</p>
         <div class="command-container">
-            <pre><code id="cmd3">curl -X POST -F "file=@<Project_name>car.zip" https://5259-93-70-84-192.ngrok-free.app/run-colmap/</code></pre>
+            <pre><code id="cmd3">curl -X POST -F "file=@<Project_name>car.zip" https://polecat-relaxing-hideously.ngrok-free.app/run-colmap/</code></pre>
             <button class="copy-btn" onclick="copyText('cmd3')">Copy</button>
         </div>
     </div>
