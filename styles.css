@@ -38,7 +38,7 @@ h3 {
     margin: 20px 0;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
-    width: calc(100% - 10px);
+    width: calc(100% - 20px);
 }
 
 .section:hover {
@@ -165,4 +165,33 @@ a:hover {
 .intro p {
     font-size: 1.1em;
     color: #b0c4de;
+}
+
+.sponsors-section {
+    text-align: center;
+}
+
+.sponsors-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.sponsor-logo {
+    transition: transform 0.3s ease;
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.05);
+}
+
+.sponsor-logo img {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.sponsor-logo:hover img {
+    opacity: 1;
 } 
