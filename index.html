@@ -12,17 +12,20 @@
     <h1><span class="gradient-text">Splatrograph API</span> 🐝</h1>
     
     <div class="intro">
-        <p>Welcome! If you'd like to test the API for personal use, follow the instructions below to get started.</p>
+        <p><span class="title-word">Splatrograph</span>
+            /ˈsplæt.rəˌɡræf/
+            n.
+            The API that generates and analyzes Gaussian Splats</p>
     </div>
 
     <div class="section">
         <h2>Generate Splats with Brush 🖌️</h2>
-        <p>Process your splats effortlessly from the terminal using this command:</p>
+        <p>Process your splats effortlessly with <a href="https://github.com/ArthurBrussee/brush" target="_blank" class="brush-link">Brush</a> from the terminal using this command:</p>
         <div class="command-container">
             <pre><code id="cmd1">curl -X POST -F "file=@chair.zip" https://splatro.ngrok.io/process-splat/</code></pre>
             <button class="copy-btn" onclick="copyText('cmd1')">Copy</button>
         </div>
-        <p>Replace <code>chair.zip</code> with any compatible .zip file for Brush to process (max 115 MB for now). Download a sample file here: <a href="https://drive.google.com/file/d/1EUcmoo5c2Ab9SiyWc8dZxbOxkEKWTU4C/view" target="_blank">chair.zip</a></p>
+        <p>Replace <code>chair.zip</code> with any compatible .zip file for Brush to process (max 230 MB for now). Download a sample file here: <a href="https://drive.google.com/file/d/1EUcmoo5c2Ab9SiyWc8dZxbOxkEKWTU4C/view" target="_blank">chair.zip</a></p>
     </div>
 
     <div class="section">
@@ -32,7 +35,7 @@
             <pre><code id="cmd2">curl -X POST -F "file=@car.zip" https://splatro.ngrok.io/run-full-pipeline/</code></pre>
             <button class="copy-btn" onclick="copyText('cmd2')">Copy</button>
         </div>
-        <p>Your zip file should look like this:
+        <p>Your zip file should look like this (max 40 MB for now):
         <pre><code id="cmd2">car.zip
     +── images
     │   +── image1.jpg
@@ -44,7 +47,7 @@
 
     <div class="section">
         <h2>Automatic COLMAP Reconstruction</h2>
-        <p>If you want to run only the COLMAP pipeline, use:</p>
+        <p>If you want to run only the COLMAP pipeline (max 40 MB), use:</p>
         <div class="command-container">
             <pre><code id="cmd3">curl -X POST -F "file=@<Project_name>car.zip" https://splatro.ngrok.io/run-colmap/</code></pre>
             <button class="copy-btn" onclick="copyText('cmd3')">Copy</button>
@@ -80,16 +83,15 @@
         <h2>Our Sponsors ❤️</h2>
         <div class="sponsors-container">
             <a href="https://ngrok.com" target="_blank" class="sponsor-logo">
-                <img src="ngrok-blue.svg" alt="ngrok logo" height="40">
+                <img src="ngrok-blue.svg" alt="ngrok logo" height="100">
             </a>
         </div>
     </div>
 
     <div class="section">
         <p><span class="highlight">Note:</span> You can remove the database.db file from your own COLMAP to increase the upload limit.</p>
-        <p>Hosted on Mac M4 Mini, in Bologna, Italy 🇮🇹</p>
     </div>
-
+    <div class="hosting-info">Designed by <a href="https://www.linkedin.com/in/mazeyar-moeini-feizabadi-155180199/" target="_blank">Mazeyar Moeini</a> in Bologna, Italy 🇮🇹. Hosted on M4 Mac Mini.</div>
     <div class="button-container">
         <!-- <button class="action-btn" onclick="window.open('https://github.com', '_blank')">View on GitHub</button> -->
         <button class="action-btn" onclick="window.open('https://discord.gg/NqwTqVYVmj', '_blank')">Join Our Discord</button>

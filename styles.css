@@ -35,10 +35,11 @@ h3 {
     background: #101724;
     padding: 25px;
     border-radius: 12px;
-    margin: 20px 0;
+    margin: 20px auto;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
-    width: calc(100% - 20px);
+    width: 85%;
+    max-width: 750px;
 }
 
 .section:hover {
@@ -194,4 +195,36 @@ a:hover {
 
 .sponsor-logo:hover img {
     opacity: 1;
-} 
+}
+
+.hosting-info {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin: 20px 0;
+}
+
+.hosting-info a {
+    color: #1b98e0;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.hosting-info a:hover {
+    color: #66d9ff;
+    text-decoration: none;
+}
+
+.title-word {
+    color: #a1e8ff;
+    font-weight: bold;
+}
+
+.brush-link {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.brush-link:hover {
+    color: #a1e8ff;
+}
