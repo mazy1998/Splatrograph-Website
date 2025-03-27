@@ -32,26 +32,28 @@
         <h2>Full Image-to-Splat Pipeline</h2>
         <p>To process a scene, structure your project folder as [car], with an images subfolder containing the scene's images, then run the complete pipeline with:</p>
         <div class="command-container">
-            <pre><code id="cmd2">curl -X POST -F "file=@car.zip" https://splatro.ngrok.io/run-full-pipeline/</code></pre>
+            <pre><code id="cmd2">curl -X POST -F "file=@banana.zip" https://splatro.ngrok.io/run-full-pipeline/</code></pre>
             <button class="copy-btn" onclick="copyText('cmd2')">Copy</button>
         </div>
         <p>Your zip file should look like this (max 40 MB for now):
-        <pre><code id="cmd2">car.zip
+        <pre><code id="cmd2">banana.zip
     +── images
     │   +── image1.jpg
     │   +── image2.jpg
     │   +── ...
     │   +── imageN.jpg</code></pre>
         </p>
+        <p>Download a sample file here: <a href="https://drive.google.com/file/d/1WlgpoZLZzqxOBjWntnrzRhsB29WR8JKP/view?usp=sharing" target="_blank">banana.zip</a></p>
     </div>
 
     <div class="section">
         <h2>Automatic COLMAP Reconstruction</h2>
         <p>If you want to run only the COLMAP pipeline (max 40 MB), use:</p>
         <div class="command-container">
-            <pre><code id="cmd3">curl -X POST -F "file=@<Project_name>car.zip" https://splatro.ngrok.io/run-colmap/</code></pre>
+            <pre><code id="cmd3">curl -X POST -F "file=@banana.zip" https://splatro.ngrok.io/run-colmap/</code></pre>
             <button class="copy-btn" onclick="copyText('cmd3')">Copy</button>
         </div>
+        <p>Download a sample file here: <a href="https://drive.google.com/file/d/1WlgpoZLZzqxOBjWntnrzRhsB29WR8JKP/view?usp=sharing" target="_blank">banana.zip</a></p>
     </div>
 
     <div class="section">
