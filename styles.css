@@ -228,3 +228,18 @@ a:hover {
 .brush-link:hover {
     color: #a1e8ff;
 }
+
+#viewer {
+    width: 745px;
+    height: 450px;
+    border: none;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    #viewer {
+        width: 100%;
+        height: 300px;
+    }
+}
