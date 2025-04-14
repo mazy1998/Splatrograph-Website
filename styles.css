@@ -243,3 +243,24 @@ a:hover {
         height: 300px;
     }
 }
+
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 5px;
+    background: rgba(27, 152, 224, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    justify-content: flex-start;
+}
+
+.metric-label {
+    font-weight: 600;
+    color: #66d9ff;
+}
+
+.metric-value {
+    font-weight: 500;
+    margin-left: 5px;
+}
